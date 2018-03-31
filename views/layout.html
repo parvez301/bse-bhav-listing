@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Bhav List</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300|Source+Sans+Pro:400,300,200" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="static/css/main_material.css">
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,400,300|Source+Sans+Pro:400,300,200" rel="stylesheet" type="text/css">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo center"></a>
+                <img class="center" src="https://zerodha.com/static/images/logo.svg" alt="Zerodha logo">
+            </a>
+        </div>
+    </nav> 
+    <div class="row container-fluid">
+        <div id="admin" class="col s12">
+            <div class="card material-table">
+                <div class="table-header">
+                    <span class="jumbotron">All BSE Stock of the {{ list_header }}</span>
+                    <div class="actions">
+                        <a href="#" class="search-toggle waves-effect btn-flat nopadding"><i class="material-icons">search stocks</i></a>
+                    </div>
+                </div>
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+{% block script %}{% endblock %}
+</html>
